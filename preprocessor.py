@@ -1,7 +1,7 @@
 import re
 
 
-# Common abbreviations and how to speak them
+# Common abbreviations 
 ABBREVIATIONS = {
     "dr."  : "doctor",
     "mr."  : "mister",
@@ -17,7 +17,7 @@ ABBREVIATIONS = {
     "approx.": "approximately",
 }
 
-# Special characters and how to speak them
+# Special characters 
 SPECIAL_CHARS = {
     "@": " at ",
     "&": " and ",
