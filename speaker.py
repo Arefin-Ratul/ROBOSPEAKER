@@ -4,7 +4,7 @@ from kokoro import KPipeline
 
 SAMPLE_RATE = 24000
 
-# Available voices mapped to simple categories
+# Available voices 
 VOICES = {
     "female_warm":   "af_heart",
     "female_clear":  "af_bella",
@@ -37,7 +37,7 @@ class Speaker:
 
         voice_id = VOICES.get(voice, "af_heart")
 
-        # Loop through all chunks so long sentences play fully
+        # Loop through all chunks for long sentences playing fully
         for gs, ps, samples in self.pipeline(text, voice=voice_id, speed=speed):
             if samples is not None and len(samples) > 0:
                 sd.play(samples, SAMPLE_RATE)
