@@ -17,28 +17,27 @@ def main():
     print("=" * 60)
     print(COMMANDS)
 
-    # Load saved settings (or defaults if first run)
     settings = load_settings()
 
-    # Initialize the TTS engine
+    # TTS engine
     speaker = Speaker()
 
     while True:
         try:
             text = input(">> ").strip()
 
-            # Skip empty input
+            # empty input skipping
             if not text:
                 continue
 
-            # Quit command
+            # Quit 
             if text.lower() == ":q":
                 clean = preprocess("Goodbye. See you soon.")
                 speaker.speak(clean, settings["voice"], settings["speed"])
                 print("Goodbye.")
                 break
 
-            # Settings command
+            # Settings 
             elif text.lower() == ":settings":
                 settings = configure_settings(settings)
 
