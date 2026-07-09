@@ -1,19 +1,1 @@
-# Virtual environments
-.venv/
-robospeaker/
-venv/
 
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-
-# User settings (personal, not for sharing)
-robospeaker_settings.json
-
-# PyCharm
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
